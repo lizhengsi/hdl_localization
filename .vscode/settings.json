@@ -1,0 +1,296 @@
+{
+    //path: maybe need modify, besides, such as clangd(compile-commands-dir)
+    "cpplint.cpplintPath": "/home/fr1511b/opt/miniconda3/bin/cpplint",
+    "sonarlint.ls.javaHome": "/usr/lib/jvm/java-17-oracle",
+    "sonarlint.pathToCompileCommands": "/your_dir/build/compile_commands.json",
+    "clangd.path": "/home/jan/.config/Code/User/globalStorage/llvm-vs-code-extensions.vscode-clangd/install/15.0.6/clangd_15.0.6/bin/clangd",
+    "clang.executable": "/usr/bin/clang",
+    "python.autoComplete.extraPaths": [
+        "/mnt/home/Data/Workspace/ROS_Melodic/kalibr_ws/devel/lib/python2.7/dist-packages",
+        "/mnt/home/Data/Workspace/ROS_Melodic/tagslam_ws/devel/lib/python2.7/dist-packages",
+        "/mnt/home/Data/Workspace/ROS_Melodic/marker_ws/devel/lib/python2.7/dist-packages",
+        "/opt/ros/melodic/lib/python2.7/dist-packages"
+    ],
+    // vscode
+    "update.mode": "manual",
+    "window.openFoldersInNewWindow": "on",
+    "C_Cpp.intelliSenseEngine": "disabled",
+    "debug.onTaskErrors": "showErrors",
+    "files.autoGuessEncoding": true,
+    "files.insertFinalNewline": true, //文件末尾自动插入一空行
+    "extensions.ignoreRecommendations": false,
+    "files.autoSave": "onFocusChange",
+    "files.associations": {
+        "*.puml": "plantuml"
+    },
+    "editor.formatOnType": true,
+    "editor.fontFamily": "'Fira Code', 'Consolas', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+    "editor.formatOnSave": true,
+    "editor.fontLigatures": true,
+    "editor.fontSize": 15,
+    "editor.tabSize": 2,
+    "editor.minimap.maxColumn": 80,
+    "[cpp]": {
+        "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
+    },
+    "security.workspace.trust.untrustedFiles": "open",
+    "C_Cpp.clang_format_style": "Google",
+    // ros
+    "ros.distro": "melodic",
+    "files.associations": {
+        "*.puml": "plantuml",
+        "cctype": "cpp",
+        "clocale": "cpp",
+        "cmath": "cpp",
+        "cstdarg": "cpp",
+        "cstddef": "cpp",
+        "cstdio": "cpp",
+        "cstdlib": "cpp",
+        "cstring": "cpp",
+        "cwchar": "cpp",
+        "array": "cpp",
+        "atomic": "cpp",
+        "strstream": "cpp",
+        "*.tcc": "cpp",
+        "chrono": "cpp",
+        "complex": "cpp",
+        "cstdint": "cpp",
+        "ctime": "cpp",
+        "cwctype": "cpp",
+        "deque": "cpp",
+        "list": "cpp",
+        "unordered_map": "cpp",
+        "vector": "cpp",
+        "exception": "cpp",
+        "algorithm": "cpp",
+        "functional": "cpp",
+        "optional": "cpp",
+        "string_view": "cpp",
+        "system_error": "cpp",
+        "tuple": "cpp",
+        "type_traits": "cpp",
+        "fstream": "cpp",
+        "initializer_list": "cpp",
+        "iomanip": "cpp",
+        "iosfwd": "cpp",
+        "iostream": "cpp",
+        "istream": "cpp",
+        "limits": "cpp",
+        "memory": "cpp",
+        "new": "cpp",
+        "ostream": "cpp",
+        "numeric": "cpp",
+        "ratio": "cpp",
+        "sstream": "cpp",
+        "stdexcept": "cpp",
+        "streambuf": "cpp",
+        "thread": "cpp",
+        "utility": "cpp",
+        "typeinfo": "cpp",
+        "valarray": "cpp",
+        "iterator": "cpp",
+        "map": "cpp",
+        "memory_resource": "cpp",
+        "random": "cpp",
+        "set": "cpp",
+        "string": "cpp",
+        "bit": "cpp",
+        "bitset": "cpp",
+        "cinttypes": "cpp",
+        "csignal": "cpp",
+        "codecvt": "cpp",
+        "condition_variable": "cpp",
+        "unordered_set": "cpp",
+        "hash_map": "cpp",
+        "hash_set": "cpp",
+        "future": "cpp",
+        "mutex": "cpp",
+        "cfenv": "cpp",
+        "typeindex": "cpp",
+        "__bit_reference": "cpp",
+        "__config": "cpp",
+        "__debug": "cpp",
+        "__functional_base": "cpp",
+        "__hash_table": "cpp",
+        "__locale": "cpp",
+        "__mutex_base": "cpp",
+        "__nullptr": "cpp",
+        "__split_buffer": "cpp",
+        "__string": "cpp",
+        "__threading_support": "cpp",
+        "__tree": "cpp",
+        "__tuple": "cpp",
+        "ios": "cpp",
+        "locale": "cpp",
+        "queue": "cpp",
+        "stack": "cpp",
+        "geometry": "cpp",
+        "*.ipp": "cpp"
+    },
+    // fileheader
+    "fileheader.cursorMode": {
+        "description": "",
+        "param": "",
+        "return": "",
+        "author": " "
+    },
+    "fileheader.configObj": {
+        "createFileTime": true,
+        "language": {
+            "languagetest": {
+                "head": "/$$",
+                "middle": " $ @",
+                "end": " $/"
+            },
+            "h/c/hpp/cpp": {
+                "head": "/*************************************************************************************",
+                "middle": " * ",
+                "end": " *************************************************************************************/"
+            },
+            "py": {
+                "head": "'''",
+                "middle": " ",
+                "end": "'''"
+            }
+        },
+        "autoAdd": true,
+        "autoAddLine": 100,
+        "autoAlready": true,
+        "annotationStr": {
+            "head": "/*",
+            "middle": " * @",
+            "end": " */",
+            "use": false
+        },
+        "headInsertLine": {
+            "php": 2,
+            "sh": 2
+        },
+        "beforeAnnotation": {
+            "文件后缀": "该文件后缀的头部注释之前添加某些内容"
+        },
+        "afterAnnotation": {
+            "文件后缀": "该文件后缀的头部注释之后添加某些内容"
+        },
+        "specialOptions": {
+            "特殊字段": "自定义比如LastEditTime/LastEditors"
+        },
+        "switch": {
+            "newlineAddAnnotation": true
+        },
+        "supportAutoLanguage": [],
+        "prohibitAutoAdd": [
+            "json"
+        ],
+        "prohibitItemAutoAdd": [
+            "项目的全称, 整个项目禁止自动添加头部注释, 可以使用快捷键添加"
+        ],
+        "moveCursor": true,
+        "dateFormat": "YYYY-MM-DD HH:mm:ss",
+        "atSymbol": [
+            "@",
+            "@"
+        ],
+        "atSymbolObj": {
+            "文件后缀": [
+                "头部注释@符号",
+                "函数注释@符号"
+            ]
+        },
+        "colon": [
+            ": ",
+            ": "
+        ],
+        "colonObj": {
+            "文件后缀": [
+                "头部注释冒号",
+                "函数注释冒号"
+            ]
+        },
+        "filePathColon": "路径分隔符替换",
+        "showErrorMessage": false,
+        "wideSame": false,
+        "wideNum": 13,
+        "functionWideNum": 0,
+        "CheckFileChange": false,
+        "createHeader": true,
+        "useWorker": false,
+        "designAddHead": false,
+        "headDesignName": "random",
+        "headDesign": false,
+        "cursorModeInternal": false
+    },
+    "fileheader.customMade": {
+        "custom_string_obkoro1_copyright": "Copyright ${now_year} lanxin"
+    },
+    // cpplint
+    "cpplint.languages": [
+        "cpp",
+        "c"
+    ],
+    "cpplint.filters": [ //屏蔽一些无关代码质量的检测
+        "-runtime/reference",
+        "-build/include_subdir",
+        "-build/c++11",
+        "-build/include_order",
+        "-legal/copyright"
+    ],
+    // sonarlint
+    "sonarlint.output.showVerboseLogs": true,
+    "sonarlint.output.showAnalyzerLogs": true,
+    "sonarlint.connectedMode.connections.sonarcloud": [
+        {
+            "organizationKey": "lx",
+            "connectionId": "lx",
+            "disableNotifications": false
+        }
+    ],
+    // clangd
+    "clangd.detectExtensionConflicts": false,
+    "clangd.arguments": [
+        // 让 Clangd 生成更详细的日志
+        "--log=verbose",
+        // 输出的 JSON 文件更美观
+        "--pretty",
+        // 全局补全(输入时弹出的建议将会提供 CMakeLists.txt 里配置的所有文件中可能的符号，会自动补充头文件)
+        "--all-scopes-completion",
+        // 建议风格：打包(重载函数只会给出一个建议）
+        // 相反可以设置为detailed
+        "--completion-style=bundled",
+        // 跨文件重命名变量
+        "--cross-file-rename",
+        // 允许补充头文件
+        "--header-insertion=iwyu",
+        // 输入建议中，已包含头文件的项与还未包含头文件的项会以圆点加以区分
+        "--header-insertion-decorators",
+        // 在后台自动分析文件(基于 complie_commands，我们用CMake生成)
+        "--background-index",
+        // 启用 Clang-Tidy 以提供「静态检查」
+        "--clang-tidy",
+        // Clang-Tidy 静态检查的参数，指出按照哪些规则进行静态检查，详情见「与按照官方文档配置好的 VSCode 相比拥有的优势」
+        // 参数后部分的*表示通配符
+        // 在参数前加入-，如-modernize-use-trailing-return-type，将会禁用某一规则
+        "--clang-tidy-checks=cppcoreguidelines-*,performance-*,bugprone-*,portability-*,modernize-*,google-*",
+        // 默认格式化风格: 谷歌开源项目代码指南
+        // "--fallback-style=file",
+        // 同时开启的任务数量
+        "-j=2",
+        // pch优化的位置(memory 或 disk，选择memory会增加内存开销，但会提升性能) 推荐在板子上使用disk
+        "--pch-storage=disk",
+        // 启用这项时，补全函数时，将会给参数提供占位符，键入后按 Tab 可以切换到下一占位符，乃至函数末
+        // 我选择禁用
+        "--function-arg-placeholders=false",
+        // compelie_commands.json 文件的目录位置(相对于工作区，由于 CMake 生成的该文件默认在 build 文件夹中，故设置为 build)
+        "--compile-commands-dir=/mnt/home/Data/SLAM/markerslam/ros/markerslam_ws/build"
+    ],
+    // tabnine
+    "tabnine.experimentalAutoImports": true,
+    "workbench.iconTheme": "material-icon-theme",
+    "bracketPairColorizer.depreciation-notice": false,
+    "python.analysis.extraPaths": [
+        "/mnt/home/Data/Workspace/ROS_Melodic/kalibr_ws/devel/lib/python2.7/dist-packages",
+        "/mnt/home/Data/Workspace/ROS_Melodic/tagslam_ws/devel/lib/python2.7/dist-packages",
+        "/mnt/home/Data/Workspace/ROS_Melodic/marker_ws/devel/lib/python2.7/dist-packages",
+        "/opt/ros/melodic/lib/python2.7/dist-packages"
+    ]
+}

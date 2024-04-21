@@ -1,0 +1,80 @@
+{
+    "version": 4,
+    "configurations": [
+        {
+            "name": "LX-Linux",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "/mnt/home/Data/SLAM/markerslam/install/include",
+                "/usr/include/x86_64-linux-gnu/qt5",
+                "/mnt/home/Data/Workspace/ROS_noetic/tagslam_ws/devel/include/**",
+                "/mnt/home/Data/Workspace/ROS_noetic/marker_ws/devel/include/**",
+                "/opt/ros/noetic/include/**",
+                "/usr/include/**"
+            ],
+            "defines": [],
+            //"compilerPath": "/usr/bin/clang",
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "clang-x64",
+            "compileCommands": "${workspaceFolder}/build/compile_commands.json"
+        },
+        {
+            "name": "LX-ROS",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "/usr/include/x86_64-linux-gnu/qt5",
+                "/mnt/home/Data/Workspace/ROS_noetic/tagslam_ws/devel/include/**",
+                "/mnt/home/Data/Workspace/ROS_noetic/marker_ws/devel/include/**",
+                "/opt/ros/noetic/include/**",
+                "/usr/include/**"
+            ],
+            "defines": [],
+            //"compilerPath": "/usr/bin/clang",
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "clang-x64",
+            "compileCommands": "${workspaceFolder}/../../build/compile_commands.json"
+        },
+        {
+            "name": "ideapad-Linux",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "/mnt/home/Data/SLAM/markerslam/install/include",
+                "/usr/include/x86_64-linux-gnu/qt5",
+                "/mnt/home/Data/Workspace/ROS_noetic/tagslam_ws/devel/include/**",
+                "/mnt/home/Data/Workspace/ROS_noetic/marker_ws/devel/include/**",
+                "/opt/ros/noetic/include/**",
+                "/usr/include/**"
+            ],
+            "defines": [],
+            //"compilerPath": "/usr/bin/clang",
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "clang-x64",
+            "compileCommands": "${workspaceFolder}/build/compile_commands.json"
+        },
+        {
+            "name": "ideapad-Windows",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "/mnt/home/Data/SLAM/markerslam/install/include",
+                "/usr/include/x86_64-linux-gnu/qt5",
+                "/mnt/home/Data/Workspace/ROS_noetic/tagslam_ws/devel/include/**",
+                "/mnt/home/Data/Workspace/ROS_noetic/marker_ws/devel/include/**",
+                "/opt/ros/noetic/include/**",
+                "/usr/include/**"
+            ],
+            "defines": [],
+            //"compilerPath": "/usr/bin/clang",
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "clang-x64",
+            "compileCommands": "${workspaceFolder}/build/compile_commands.json"
+        }
+    ]
+}

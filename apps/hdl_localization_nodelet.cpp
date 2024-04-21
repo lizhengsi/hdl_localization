@@ -29,10 +29,11 @@
 #include <hdl_localization/delta_estimater.hpp>
 
 #include <hdl_localization/ScanMatchingStatus.h>
-#include <hdl_global_localization/SetGlobalMap.h>
-#include <hdl_global_localization/QueryGlobalLocalization.h>
+#include <hdl_localization/SetGlobalMap.h>
+#include <hdl_localization/QueryGlobalLocalization.h>
 
-namespace hdl_localization {
+
+namespace hdl_localization{
 
 class HdlLocalizationNodelet : public nodelet::Nodelet {
 public:
@@ -66,7 +67,7 @@ public:
 
     pose_pub = nh.advertise<nav_msgs::Odometry>("/odom", 5, false);
     aligned_pub = nh.advertise<sensor_msgs::PointCloud2>("/aligned_points", 5, false);
-    status_pub = nh.advertise<ScanMatchingStatus>("/status", 5, false);
+    status_pub = nh.advertise<hdl_localization::ScanMatchingStatus>("/status", 5, false);
 
     // global localization
     use_global_localization = private_nh.param<bool>("use_global_localization", true);
@@ -75,8 +76,8 @@ public:
       ros::service::waitForService("/hdl_global_localization/set_global_map");
       ros::service::waitForService("/hdl_global_localization/query");
 
-      set_global_map_service = nh.serviceClient<hdl_global_localization::SetGlobalMap>("/hdl_global_localization/set_global_map");
-      query_global_localization_service = nh.serviceClient<hdl_global_localization::QueryGlobalLocalization>("/hdl_global_localization/query");
+      set_global_map_service = nh.serviceClient<hdl_localization::SetGlobalMap>("/hdl_global_localization/set_global_map");
+      query_global_localization_service = nh.serviceClient<hdl_localization::QueryGlobalLocalization>("/hdl_global_localization/query");
 
       relocalize_server = nh.advertiseService("/relocalize", &HdlLocalizationNodelet::relocalize, this);
     }
@@ -291,7 +292,7 @@ private:
 
     if(use_global_localization) {
       NODELET_INFO("set globalmap for global localization!");
-      hdl_global_localization::SetGlobalMap srv;
+      hdl_localization::SetGlobalMap srv;
       pcl::toROSMsg(*globalmap, srv.request.global_map);
 
       if(!set_global_map_service.call(srv)) {
@@ -316,7 +317,7 @@ private:
     delta_estimater->reset();
     pcl::PointCloud<PointT>::ConstPtr scan = last_scan;
 
-    hdl_global_localization::QueryGlobalLocalization srv;
+    hdl_localization::QueryGlobalLocalization srv;
     pcl::toROSMsg(*scan, srv.request.cloud);
     srv.request.max_num_candidates = 1;
 
@@ -443,7 +444,7 @@ private:
    * @brief publish scan matching status information
    */
   void publish_scan_matching_status(const std_msgs::Header& header, pcl::PointCloud<pcl::PointXYZI>::ConstPtr aligned) {
-    ScanMatchingStatus status;
+    hdl_localization::ScanMatchingStatus status;
     status.header = header;
 
     status.has_converged = registration->hasConverged();

@@ -1,0 +1,3 @@
+globalmap_pcd: map.pcd
+convert_utm_to_local: True
+downsample_resolution: 0.1

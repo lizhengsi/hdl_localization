@@ -1,0 +1,111 @@
+{
+    /*
+    VS Code supports variable substitution inside strings in launch.json and has the following predefined variables:
+    ${workspaceFolder} - the path of the folder opened in VS Code
+    ${workspaceRootFolderName} - the name of the folder opened in VS Code without any slashes (/)
+    ${file} - the current opened file
+    ${relativeFile} - the current opened file relative to workspaceRoot
+    ${fileBasename} - the current opened file's basename
+    ${fileBasenameNoExtension} - the current opened file's basename with no file extension
+    ${fileDirname} - the current opened file's dirname
+    ${fileExtname} - the current opened file's extension
+    ${cwd} - the task runner's current working directory on startup
+    ${lineNumber} - the current selected line number in the active file
+    You can also reference environment variables through ${env:Name} syntax (for example, ${env:PATH}). Be sure to match the environment variable name's casing, for example ${env:Path} on Windows.
+    */
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "LX-Linux", // 配置名称，将会在启动配置的下拉菜单中显示
+            "type": "cppdbg", // 配置类型，这里只能为cppdbg
+            "request": "launch", // 请求配置类型，可以为launch（启动）或attach（附加）
+            // "program": "${workspaceFolder}/${fileBasenameNoExtension}", // 将要进行调试的程序的路径
+            "program": "${workspaceFolder}/build/utils/${fileBasenameNoExtension}",
+            "args": [], // 程序调试时传递给程序的命令行参数，一般设为空即可
+            "stopAtEntry": false, // 设为true时程序将暂停在程序入口处，一般设置为false
+            "cwd": "${workspaceFolder}", // 调试程序时的工作目录，一般为${workspaceFolder}即代码所在目录
+            "environment": [],
+            "externalConsole": false, // 调试时是否显示控制台窗口，一般设置为true显示控制台
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "为 gdb 启用整齐打印",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            //"preLaunchTask": "C/C++: g++ build active file",
+            "preLaunchTask": "build", // 调试会话开始前执行的任务，与tasks.json定义的任务标签相同
+            "miDebuggerPath": "/usr/bin/gdb" // miDebugger的路径，注意这里要与自己的debugger的路径对应
+        },
+        {
+            "name": "LX-ROS",
+            "type": "cppdbg",
+            "request": "launch",
+            // "program": "${workspaceFolder}/../../devel/lib/",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/../../",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "catkin_make", // 调试会话开始前执行的任务，与tasks.json定义的任务标签相同
+        },
+        {
+            "name": "ideapad-Linux", // 配置名称，将会在启动配置的下拉菜单中显示
+            "type": "cppdbg", // 配置类型，这里只能为cppdbg
+            "request": "launch", // 请求配置类型，可以为launch（启动）或attach（附加）
+            // "program": "${workspaceFolder}/${fileBasenameNoExtension}", // 将要进行调试的程序的路径
+            "program": "${workspaceFolder}/build/utils/${fileBasenameNoExtension}",
+            "args": [], // 程序调试时传递给程序的命令行参数，一般设为空即可
+            "stopAtEntry": false, // 设为true时程序将暂停在程序入口处，一般设置为false
+            "cwd": "${workspaceFolder}", // 调试程序时的工作目录，一般为${workspaceFolder}即代码所在目录
+            "environment": [],
+            "externalConsole": false, // 调试时是否显示控制台窗口，一般设置为true显示控制台
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "为 gdb 启用整齐打印",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            //"preLaunchTask": "C/C++: g++ build active file",
+            "preLaunchTask": "build", // 调试会话开始前执行的任务，与tasks.json定义的任务标签相同
+            "miDebuggerPath": "/usr/bin/gdb" // miDebugger的路径，注意这里要与自己的debugger的路径对应
+        },
+        {
+            "name": "ideapad-Windows", // 配置名称，将会在启动配置的下拉菜单中显示
+            "type": "cppdbg", // 配置类型，这里只能为cppdbg
+            "request": "launch", // 请求配置类型，可以为launch（启动）或attach（附加）
+            // "program": "${workspaceFolder}/${fileBasenameNoExtension}", // 将要进行调试的程序的路径
+            "program": "${workspaceFolder}/build/utils/${fileBasenameNoExtension}",
+            "args": [], // 程序调试时传递给程序的命令行参数，一般设为空即可
+            "stopAtEntry": false, // 设为true时程序将暂停在程序入口处，一般设置为false
+            "cwd": "${workspaceFolder}", // 调试程序时的工作目录，一般为${workspaceFolder}即代码所在目录
+            "environment": [],
+            "externalConsole": false, // 调试时是否显示控制台窗口，一般设置为true显示控制台
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "为 gdb 启用整齐打印",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            //"preLaunchTask": "C/C++: g++ build active file",
+            "preLaunchTask": "build", // 调试会话开始前执行的任务，与tasks.json定义的任务标签相同
+            "miDebuggerPath": "/usr/bin/gdb" // miDebugger的路径，注意这里要与自己的debugger的路径对应
+        }
+    ]
+}

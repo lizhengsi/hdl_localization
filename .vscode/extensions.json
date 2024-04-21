@@ -1,0 +1,32 @@
+{
+  "recommendations": [
+    "ms-vscode.cpptools",
+    "mitaki28.vscode-clang",
+    "ms-vscode.cpptools-extension-pack",
+    "ms-vscode.cpptools-themes",
+    "MS-CEINTL.vscode-language-pack-zh-hans",
+    "xaver.clang-format",
+    "notskm.clang-tidy",
+    "llvm-vs-code-extensions.vscode-clangd",
+    "eamodio.gitlens",
+    "ms-iot.vscode-ros",
+    "ms-python.python",
+    "twxs.cmake",
+    "ms-vscode.cmake-tools",
+    "formulahendry.code-runner",
+    "streetsidesoftware.code-spell-checker",
+    "vsls-contrib.codetour",
+    "mine.cpplint",
+    "hediet.vscode-drawio",
+    "mhutchie.git-graph",
+    "SirTori.indenticator",
+    "OBKoro1.korofileheader",
+    "yzhang.markdown-all-in-one",
+    "shd101wyy.markdown-preview-enhanced",
+    "PKief.material-icon-theme",
+    "ms-iot.vscode-ros",
+    "wayou.vscode-todo-highlight",
+    "shardulm94.trailing-spaces",
+    "eamodio.gitlens"
+  ]
+}

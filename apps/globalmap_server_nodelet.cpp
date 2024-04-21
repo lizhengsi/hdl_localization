@@ -14,7 +14,8 @@
 
 #include <pcl/filters/voxel_grid.h>
 
-namespace hdl_localization {
+
+namespace hdl_localization{
 
 class GlobalmapServerNodelet : public nodelet::Nodelet {
 public:
